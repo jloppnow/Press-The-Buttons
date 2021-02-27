@@ -1,0 +1,60 @@
+; palette 0
+	RGB 31, 31, 31
+	RGB 25, 21, 16
+	RGB 20, 15, 07
+	RGB 14, 08, 00
+; palette 1
+	RGB 31, 31, 31
+	RGB 23, 23, 23
+	RGB 13, 13, 13
+	RGB 07, 07, 07
+; palette 2
+	RGB 31, 31, 31
+	RGB 07, 23, 08
+	RGB 04, 15, 06
+	RGB 07, 07, 07
+Arduino: 1.8.12 (Windows 10), Board: "Arduino Nano, ATmega328P"
+
+Sketch uses 5078 bytes (16%) of program storage space. Maximum is 30720 bytes.
+Global variables use 239 bytes (11%) of dynamic memory, leaving 1809 bytes for local variables. Maximum is 2048 bytes.
+An error occurred while uploading the sketch
+Error opening serial port 'COM1'. (Port busy)
+Error opening serial port 'COM1'. (Port busy)
+Error opening serial port 'COM1'. (Port busy)
+Error opening serial port 'COM1'. (Port busy)
+
+This report would have more information with
+"Show verbose output during compilation"
+option enabled in File -> Preferences
+
+
+public void main(String[] args) {
+	System.out.println("This is my New keyboard.");
+	System.out.println("Look at it GLOW!");
+	for (int i = 0; i < 100; i ++) {
+		System.out.println("This is number: " + (i + 1));
+		int newValue = i * factor;
+		System.out.println("update: " + newValue);
+	}
+
+	return;
+}
+
+public void initRunnable() {
+	Runnable runnable = new Runnable() {
+		@Override
+		public void run() {
+			while(true) {
+
+				try {
+					for (int i = 0; i < 6; i ++) {
+						Log.e("This is my new Keyboard! HAHAH I love it!")
+					}
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}
+	};
+}

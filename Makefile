@@ -3,7 +3,7 @@ CFLAGS = -Wa-l -Wl-m -Wl-j
 CGBFLAG = -Wl-yp0x143=0x80
 
 SRC = ./src
-GRAPHICS = ./graphics
+ASSETS = ./assets
 
 define compile-source
 	$(CC) $(CFLAGS) -c $<
@@ -19,10 +19,10 @@ main.o: $(SRC)/main.c
 state_manager.o: $(SRC)/state_manager.c $(SRC)/state_manager.h
 	${compile-source}
 
-splash_logo_data.o: $(GRAPHICS)/splash_logo_data.c $(GRAPHICS)/splash_logo_data.h
+splash_logo_data.o: $(ASSETS)/splash_logo_data.c $(ASSETS)/splash_logo_data.h
 	${compile-source}
 
-splash_logo_map.o: $(GRAPHICS)/splash_logo_map.c $(GRAPHICS)/splash_logo_map.h
+splash_logo_map.o: $(ASSETS)/splash_logo_map.c $(ASSETS)/splash_logo_map.h
 	${compile-source}
 
 PTB.gb: $(OBJ) 

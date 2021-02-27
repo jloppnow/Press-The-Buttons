@@ -2,18 +2,11 @@
 #include <stdio.h>
 
 #include "state_manager.h"
+#include "utilities/utils.h"
 
-unsigned int i, ii;
 unsigned int gameRunning;
 
-void wait_frames(unsigned int);
 void main();
-
-void wait_frames(unsigned int numloops) {
-    for (i = 0; i < numloops; i ++) {
-        wait_vbl_done();
-    }
-}
 
 void main() {
     SPRITES_8x8;

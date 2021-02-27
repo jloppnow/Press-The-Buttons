@@ -13,7 +13,7 @@
 #include <stdio.h>
 #include <gb/gb.h>
 
-#include "../graphics/splash_logo_map.h"
+#include "../assets/splash_logo_map.h"
 
 #define SPLASH_LOGO 0U
 #define MAIN_MENU 1U
@@ -27,16 +27,15 @@ void set_state(unsigned int newState) {
 
 void update_state() {
     //update the state
+    //**Note: Splash logo does not have an update method cause it doesnt do anything
     switch(currentState) {
-        case SPLASH_LOGO:
-            //update the splash logo state
-            update_splash_logo();
-            break;
         case MAIN_MENU:
             //update the main menu state
             break;
         case LEVEL_1:
             //update level 1 state
+            break;
+        default:
             break;
     }
 }
